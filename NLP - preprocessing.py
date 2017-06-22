@@ -1,3 +1,4 @@
+#run this on training and test set.
 from sklearn.feature_extraction.stop_words import ENGLISH_STOP_WORDS
 
 #filter if stop or punctuation ,"SYM", "NUM"

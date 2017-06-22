@@ -15,7 +15,7 @@ vectorizer = TfidfVectorizer(tokenizer=tok, preprocessor=prep,
 #pipeline model							
 model = Pipeline([
         ('vectorizer', vectorizer),
-        ('classifier',OneVsRestClassifier(LinearSVC(C=100)))#C=50 (100)#n_jobs=16
+        ('classifier',OneVsRestClassifier(LinearSVC(C=100)))
         ])
 
 docs_train, docs_test, labels_train, labels_test = train_test_split(
@@ -34,9 +34,10 @@ print(accuracy_score(labels_test, labels_predict))
 #train on whole data
 model.fit(X_train, Y_train) # train whole data
 
-#predict unseen data
+#predict unseen test set
 Y_test = model.predict(X_test)#test data
 
+# save file - upload file
 np.savetxt("predicted_labels.csv", Y_test, delimiter=",")
 
 
