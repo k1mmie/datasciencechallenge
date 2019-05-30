@@ -3,7 +3,8 @@
 Y_flat = pd.DataFrame(Y, columns=mlb.classes_)
 df = pd.concat([df, Y_flat], axis=1)
 
-# cycles through the Y labels picking up the max number of topics until reaches 50k. prioritize topics with lower number of documents first.
+# (optional) cycles through the Y labels picking up the max number of topics until reaches 50k. prioritize topics with lower number of documents first.
+# We do this because laptop couldn't deal with the huge amount of data.  Not needed if memory isn't an issue. 
 indexes = []
 for col in itertools.cycle(mlb.classes_):
     if len(indexes) >= 50000:
