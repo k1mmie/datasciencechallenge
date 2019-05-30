@@ -4,7 +4,7 @@
 """
 #import libraries
 
-## infer topics from words in articles and add new topics
+## infer topics from words in articles and add new topics (this is optional)
 
 f = 'articles.csv'
 df = pd.read_csv(f, encoding='latin')
