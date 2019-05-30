@@ -4,6 +4,8 @@ import spacy
 from spacy import attrs
 from spacy.tokens.doc import Doc
 
+#this is the NLP process
+
 #load spacy
 nlp = spacy.load('en_core_web_md') 
 #add stop words from en_default
